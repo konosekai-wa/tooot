@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一覧 ― 日々新報</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
+header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
+header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
+header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
+nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
+nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
+nav.crumbs a{color:var(--muted)}
+main{padding:28px 0 48px}
+.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
+h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
+.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600}
+p{margin:0 0 1em;text-align:justify}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
+dl.meta dt{color:var(--muted);white-space:nowrap}
+dl.meta dd{margin:0}
+.tbl{overflow-x:auto;margin:14px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.c,th.c{text-align:center}
+tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
+td.r{font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
+.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
+.tadashigaki p{margin:0}
+.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
+.box p{margin:0}
+figure{margin:22px 0}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+ol,ul{padding-left:1.6em;margin:0 0 1em}
+ol li,ul li{margin:2px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
+ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
+ul.list .t{font-size:17px}
+ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
+figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
+figure.chart svg text{font-family:inherit}
+.buy{margin:26px 0 10px}
+.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
+.buy a:hover{text-decoration:none;opacity:.9}
+.buy p{margin:0}
+.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
+.cart p{margin:0 0 .6em}
+.cart p:last-child{margin:0}
+footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
+footer.site a.mark:hover{opacity:1;text-decoration:none}
+@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
+
+:root{--bg:#f1ece0;--fg:#1f1d19;--muted:#5c5648;--rule:#8f8775;--panel:#ebe4d3;--accent:#8a2f1f;--link:#1f1d19;
+--head-bg:#f1ece0;--head-fg:#1f1d19;--head-border:3px double #1f1d19;--font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--brand-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--title-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--fig-border:1px solid #8f8775;--fig-bg:#f7f3ea;--fig-pad:4px}
+header.site .wrap{justify-content:center;padding-top:22px;padding-bottom:14px}
+header.site .brand{font-size:40px;letter-spacing:.6em;font-weight:700;margin-right:-.6em}
+header.site .tag{display:none}
+nav.crumbs{border-bottom:1px solid var(--rule)}
+.kind{display:none}
+h1{font-size:14px;font-weight:400;letter-spacing:.14em;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:6px;margin-bottom:18px;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+.sub{display:none}
+dl.meta{display:none}
+.lead{display:grid;grid-template-columns:1.25fr 1fr;gap:10px 26px;padding-bottom:18px;border-bottom:1px solid var(--rule);margin-bottom:18px}
+.lead h3{grid-column:1/-1;font-size:34px;line-height:1.3;margin:0 0 4px;border:0;letter-spacing:.04em;font-weight:700}
+.lead h4{grid-column:1/-1;font-size:17px;font-weight:400;margin:0 0 8px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:6px 0}
+.lead .txt p{font-size:15.5px;line-height:1.8;text-align:justify}
+.lead figure{margin:0;align-self:start}
+.lead figcaption{text-align:center}
+.kiji-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 22px;padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:14px}
+.kiji{padding:0 0 12px}
+.kiji+.kiji{border-left:1px solid var(--rule);padding-left:22px;margin-left:-11px}
+.kiji h3{font-size:21px;line-height:1.35;margin:0 0 6px;font-weight:700;letter-spacing:.02em}
+.kiji h4{font-size:14.5px;font-weight:400;margin:0 0 8px;color:var(--muted)}
+.kiji p{font-size:14.5px;line-height:1.75;text-align:justify}
+.kiji p:last-child{margin:0}
+.ran{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;font-size:14px}
+.ran h3{font-size:14px;letter-spacing:.3em;margin:0 0 4px;font-weight:700;border-bottom:1px solid var(--rule);padding-bottom:2px}
+.ran p{margin:0 0 6px;line-height:1.7}
+.more a{font-size:13.5px;color:var(--accent)}
+.more{margin:0}
+main article h2{font-size:30px;border:0;line-height:1.35;margin:0 0 6px}
+@media (max-width:640px){header.site .brand{font-size:30px}.lead{grid-template-columns:1fr}.lead h3{font-size:26px}.kiji-grid{grid-template-columns:1fr}.kiji+.kiji{border-left:0;padding-left:0;margin-left:0;border-top:1px solid var(--rule);padding-top:12px}.ran{grid-template-columns:1fr}}
+</style></head>
+<body class="site-shinbun">
+<header class="site"><div class="wrap"><a class="brand" href="index.html">日々新報</a><span class="tag">電子版</span></div></header>
+
+<main><div class="wrap">
+<p class="kind">一覧</p><h1>電子版</h1><p class="sub">日刊紙『日々新報』の紙面を掲載しています。</p><ul class="list"><li><span class="k">一面</span><a class="t" href="ichimen.html">統1178年10月7日（朝刊）　第一面</a><span class="y">統1178年10月7日</span></li><li><span class="k">科学面</span><a class="t" href="kagaku_11men.html">統1178年10月7日（朝刊）　科学　第11面</a><span class="y">統1178年10月7日</span></li></ul>
+</div></main>
+<footer class="site"><div class="wrap"><span>日々新報</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
+</body></html>

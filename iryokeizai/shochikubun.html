@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>処置区分別平均寿命（統1177年） ― 医療経済研究機構</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
+header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
+header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
+header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
+nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
+nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
+nav.crumbs a{color:var(--muted)}
+main{padding:28px 0 48px}
+.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
+h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
+.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600}
+p{margin:0 0 1em;text-align:justify}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
+dl.meta dt{color:var(--muted);white-space:nowrap}
+dl.meta dd{margin:0}
+.tbl{overflow-x:auto;margin:14px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.c,th.c{text-align:center}
+tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
+td.r{font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
+.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
+.tadashigaki p{margin:0}
+.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
+.box p{margin:0}
+figure{margin:22px 0}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+ol,ul{padding-left:1.6em;margin:0 0 1em}
+ol li,ul li{margin:2px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
+ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
+ul.list .t{font-size:17px}
+ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
+figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
+figure.chart svg text{font-family:inherit}
+.buy{margin:26px 0 10px}
+.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
+.buy a:hover{text-decoration:none;opacity:.9}
+.buy p{margin:0}
+.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
+.cart p{margin:0 0 .6em}
+.cart p:last-child{margin:0}
+footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
+footer.site a.mark:hover{opacity:1;text-decoration:none}
+@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
+
+:root{--bg:#fff;--fg:#1f2d2a;--muted:#5f6f6b;--rule:#cbd8d4;--panel:#f1f6f4;--accent:#2d7a62;--link:#2d7a62;
+--head-bg:#f1f6f4;--head-fg:#1f2d2a;--head-border:2px solid #2d7a62;--font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--brand-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--title-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--fig-border:0;--fig-bg:transparent;--fig-pad:0}
+h1{font-size:23px}
+</style></head>
+<body class="site-iryokeizai">
+<header class="site"><div class="wrap"><a class="brand" href="index.html">医療経済研究機構</a><span class="tag">集計資料</span></div></header>
+<nav class="crumbs"><div class="wrap"><a href="index.html">医療経済研究機構</a>　›　資料</div></nav>
+<main><div class="wrap">
+<p class="kind">資料</p>
+<h1>処置区分別平均寿命（統1177年）</h1>
+<dl class="meta"><dt>集計</dt><dd>処置区分別平均寿命</dd><dt>集計年</dt><dd>統1177年</dd><dt>層の区分</dt><dd>公的な処置のみを受けた層／高額な処置を受けた層</dd></dl>
+<h3>要約</h3>
+<p>本集計は、定期処置を公的な処置のみで受けた層と、全額自費の高額な処置を受けた層とに分け、それぞれの平均寿命を比較したものである。統1177年の集計では、両者の差は約10年である。処置が広まり始めた頃には、この差は数十年に及んでいた。公的な処置の内容が整い、普及が進むにつれて差は縮小してきたが、処置の細かさ・間隔・質の違いに対応する差は現在も残っている。</p>
+<figure class="chart" role="img" aria-label="二つの層の平均寿命の差"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="100%" style="display:block;max-width:640px;margin:0 auto;font-family:inherit"><rect x="135.5" y="96.0" width="120.0" height="168.0" fill="var(--accent)"/><text x="195.5" y="88.0" font-size="16" fill="var(--fg)" text-anchor="middle">数十年</text><text x="195.5" y="288" font-size="15" fill="var(--fg)" text-anchor="middle">処置が広まり始めた頃</text><rect x="414.5" y="208.0" width="120.0" height="56.0" fill="var(--accent)"/><text x="474.5" y="200.0" font-size="16" fill="var(--fg)" text-anchor="middle">約10年</text><text x="474.5" y="288" font-size="15" fill="var(--fg)" text-anchor="middle">統1177年</text><line x1="56" y1="264" x2="614" y2="264" stroke="var(--fg)" stroke-width="1.2"/><text x="6" y="26" font-size="13" fill="var(--muted)">差（年）</text></svg><figcaption>図　公的な処置のみの層と高額な処置を受けた層の平均寿命の差。「数十年」の棒の高さは目安であり、正確な値を示すものではない。</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>時期</th><th class="r">二つの層の平均寿命の差</th></tr></thead>
+<tbody>
+<tr><td>処置が広まり始めた頃</td><td class="r">数十年</td></tr>
+<tr><td>統1177年</td><td class="r">約10年</td></tr>
+</tbody></table></div>
+<div class="note"><p>注）区分は本人が受けた処置の記録に基づく。金額による区分ではない。</p></div>
+</div></main>
+<footer class="site"><div class="wrap"><span>医療経済研究機構</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
+</body></html>

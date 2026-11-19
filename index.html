@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>資料の案内 ― 資料の案内</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
+header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
+header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
+header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
+nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
+nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
+nav.crumbs a{color:var(--muted)}
+main{padding:28px 0 48px}
+.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
+h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
+.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600}
+p{margin:0 0 1em;text-align:justify}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
+dl.meta dt{color:var(--muted);white-space:nowrap}
+dl.meta dd{margin:0}
+.tbl{overflow-x:auto;margin:14px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.c,th.c{text-align:center}
+tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
+td.r{font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
+.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
+.tadashigaki p{margin:0}
+.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
+.box p{margin:0}
+figure{margin:22px 0}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+ol,ul{padding-left:1.6em;margin:0 0 1em}
+ol li,ul li{margin:2px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
+ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
+ul.list .t{font-size:17px}
+ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
+figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
+figure.chart svg text{font-family:inherit}
+.buy{margin:26px 0 10px}
+.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
+.buy a:hover{text-decoration:none;opacity:.9}
+.buy p{margin:0}
+.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
+.cart p{margin:0 0 .6em}
+.cart p:last-child{margin:0}
+footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
+footer.site a.mark:hover{opacity:1;text-decoration:none}
+@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
+
+:root{--bg:#f7f6f3;--fg:#222;--muted:#666;--rule:#d8d5cd;--panel:#fff;--accent:#333;--link:#333;
+--head-bg:#f7f6f3;--head-fg:#222;--head-border:1px solid #d8d5cd;--font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--brand-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--title-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--fig-border:0;--fig-bg:transparent;--fig-pad:0}
+.org{margin:0 0 30px}
+.org h2{border-bottom:1px solid var(--rule);font-size:17px;letter-spacing:.2em}
+.org p.lead{font-size:14.5px;color:var(--muted);margin:0 0 6px}
+</style></head>
+<body class="site-">
+<header class="site"><div class="wrap"><a class="brand" href="index.html">資料の案内</a><span class="tag"></span></div></header>
+
+<main><div class="wrap">
+<p class="kind">案内</p><h1>資料の案内</h1><p class="sub">各機関が公開している資料のうち、よく参照されるものをまとめています。機関名からそれぞれの一覧へ移れます。</p><section class="org"><h2><a href="toukeiin/index.html">統計院</a></h2><p class="lead">統計院が公表した調査結果と推計の表を掲げています。表の数値は推計値を含みます。</p><ul class="list"><li><span class="k">統計表</span><a class="t" href="toukeiin/koyou_dai12hyou.html">第12表　定年年齢の分布（従業員十人以上の事業所）</a><span class="y">統1177年</span></li><li><span class="k">統計表</span><a class="t" href="toukeiin/heikinjumyou_suikei.html">平均寿命の長期推計</a><span class="y">統1177年</span></li><li><span class="k">統計表</span><a class="t" href="toukeiin/seimeihyou.html">生命表（抜粋）</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="gakkai/index.html">神経科学会</a></h2><p class="lead">『神経科学会誌』各号の目次と論文の要旨を掲載しています。要旨までは無料で閲覧できます。</p><ul class="list"><li><span class="k">目次</span><a class="t" href="gakkai/mokuji_412_3.html">神経科学会誌　第412巻　第3号　目次</a><span class="y">統1177年</span></li><li><span class="k">論文</span><a class="t" href="gakkai/souki_1177.html">長期の運動学習に伴う樹状突起上の可塑性固定複合体の形成と、干渉課題への適応の予測</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="hakubutsukan/index.html">国立自然誌博物館</a></h2><p class="lead">『生き物図譜』の各項を図版とともに掲載しています。</p><ul class="list"><li><span class="k">図譜</span><a class="t" href="hakubutsukan/hanenezumi.html">ハネネズミ</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="garou/index.html">国立画廊</a></h2><p class="lead">国立画廊の所蔵品について、作品の情報と解説を掲載しています。</p><ul class="list"><li><span class="k">所蔵品</span><a class="t" href="garou/lune_bridge.html">リュネ橋の修繕</a><span class="y">統9世紀頃</span></li></ul></section><section class="org"><h2><a href="shoten/index.html">書店</a></h2><p class="lead">取り扱い書籍の書誌情報と内容紹介を掲載しています。</p><ul class="list"><li><span class="k">書誌</span><a class="t" href="shoten/sen_wo_hiku.html">線を引く ― 定年と年金の二百年</a><span class="y">統1152年</span></li><li><span class="k">書誌</span><a class="t" href="shoten/nou_wa_naze.html">脳はなぜ忘れないのか ― 守る仕組みの発見まで</a><span class="y">統1176年</span></li></ul></section><section class="org"><h2><a href="shakaihosho/index.html">社会保障研究所</a></h2><p class="lead">社会保障研究所が実施した調査の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="shakaihosho/koureisetai.html">高齢世帯の生活調査（統780年・統830年）</a><span class="y">統780年・統830年</span></li></ul></section><section class="org"><h2><a href="iryokeizai/index.html">医療経済研究機構</a></h2><p class="lead">医療経済研究機構がまとめた集計の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="iryokeizai/shochikubun.html">処置区分別平均寿命（統1177年）</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="rodoiinkai/index.html">労働委員会</a></h2><p class="lead">労働委員会が保管する記録の集計を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="rodoiinkai/sougikiroku.html">争議記録　長期集計（衰えを理由とする解雇をめぐる争議）</a><span class="y">長期集計</span></li></ul></section><section class="org"><h2><a href="iryohokencho/index.html">医療保険庁</a></h2><p class="lead">医療保険庁が公表する集計の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="iryohokencho/teinenkenshin.html">定年時健康診断集計（統1177年）</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="shinbun/index.html">日々新報</a></h2><p class="lead">日刊紙『日々新報』の紙面を掲載しています。</p><ul class="list"><li><span class="k">一面</span><a class="t" href="shinbun/ichimen.html">統1178年10月7日（朝刊）　第一面</a><span class="y">統1178年10月7日</span></li><li><span class="k">科学面</span><a class="t" href="shinbun/kagaku_11men.html">統1178年10月7日（朝刊）　科学　第11面</a><span class="y">統1178年10月7日</span></li></ul></section>
+</div></main>
+<footer class="site"><div class="wrap"><span>資料の案内</span><a class="mark" href="_/index.html" title="※">※</a></div></footer>
+</body></html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>一覧 ― 社会保障研究所</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
+header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
+header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
+header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
+nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
+nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
+nav.crumbs a{color:var(--muted)}
+main{padding:28px 0 48px}
+.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
+h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
+.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600}
+p{margin:0 0 1em;text-align:justify}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
+dl.meta dt{color:var(--muted);white-space:nowrap}
+dl.meta dd{margin:0}
+.tbl{overflow-x:auto;margin:14px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.c,th.c{text-align:center}
+tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
+td.r{font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
+.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
+.tadashigaki p{margin:0}
+.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
+.box p{margin:0}
+figure{margin:22px 0}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+ol,ul{padding-left:1.6em;margin:0 0 1em}
+ol li,ul li{margin:2px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
+ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
+ul.list .t{font-size:17px}
+ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
+figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
+figure.chart svg text{font-family:inherit}
+.buy{margin:26px 0 10px}
+.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
+.buy a:hover{text-decoration:none;opacity:.9}
+.buy p{margin:0}
+.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
+.cart p{margin:0 0 .6em}
+.cart p:last-child{margin:0}
+footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
+footer.site a.mark:hover{opacity:1;text-decoration:none}
+@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
+
+:root{--bg:#f4f6f8;--fg:#1e2a36;--muted:#5d6b78;--rule:#c8d0d8;--panel:#fff;--accent:#2a5c86;--link:#2a5c86;
+--head-bg:#2a5c86;--head-fg:#fff;--head-border:0;--font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--brand-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--title-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--fig-border:0;--fig-bg:transparent;--fig-pad:0}
+main .wrap>*:not(.kind):not(h1):not(.sub){}
+h1{font-size:23px}
+</style></head>
+<body class="site-shakaihosho">
+<header class="site"><div class="wrap"><a class="brand" href="index.html">社会保障研究所</a><span class="tag">調査資料</span></div></header>
+
+<main><div class="wrap">
+<p class="kind">一覧</p><h1>調査資料</h1><p class="sub">社会保障研究所が実施した調査の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="koureisetai.html">高齢世帯の生活調査（統780年・統830年）</a><span class="y">統780年・統830年</span></li></ul>
+</div></main>
+<footer class="site"><div class="wrap"><span>社会保障研究所</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
+</body></html>

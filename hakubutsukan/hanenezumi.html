@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ハネネズミ ― 国立自然誌博物館</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
+header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
+header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
+header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
+nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
+nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
+nav.crumbs a{color:var(--muted)}
+main{padding:28px 0 48px}
+.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
+h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
+.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600}
+p{margin:0 0 1em;text-align:justify}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
+dl.meta dt{color:var(--muted);white-space:nowrap}
+dl.meta dd{margin:0}
+.tbl{overflow-x:auto;margin:14px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.c,th.c{text-align:center}
+tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
+td.r{font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
+.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
+.tadashigaki p{margin:0}
+.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
+.box p{margin:0}
+figure{margin:22px 0}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+ol,ul{padding-left:1.6em;margin:0 0 1em}
+ol li,ul li{margin:2px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
+ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
+ul.list .t{font-size:17px}
+ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
+figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
+figure.chart svg text{font-family:inherit}
+.buy{margin:26px 0 10px}
+.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
+.buy a:hover{text-decoration:none;opacity:.9}
+.buy p{margin:0}
+.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
+.cart p{margin:0 0 .6em}
+.cart p:last-child{margin:0}
+footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
+footer.site a.mark:hover{opacity:1;text-decoration:none}
+@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
+
+:root{--bg:#f5f0e4;--fg:#2b2419;--muted:#7a6d58;--rule:#cfc3ab;--panel:#efe7d4;--accent:#7a4e2a;--link:#7a4e2a;
+--head-bg:#3f2d1d;--head-fg:#f1e8d6;--head-border:0;--font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--brand-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--title-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--fig-border:1px solid #b7a98b;--fig-bg:#fdfaf2;--fig-pad:10px}
+h1{font-size:30px;letter-spacing:.2em}
+h2{border-bottom:1px dotted var(--rule);letter-spacing:.3em;font-size:16px}
+figure{margin:18px 0 26px}
+figure img{box-shadow:0 2px 10px rgba(60,40,10,.12)}
+</style></head>
+<body class="site-hakubutsukan">
+<header class="site"><div class="wrap"><a class="brand" href="index.html">国立自然誌博物館</a><span class="tag">生き物図譜</span></div></header>
+<nav class="crumbs"><div class="wrap"><a href="index.html">国立自然誌博物館</a>　›　図譜</div></nav>
+<main><div class="wrap">
+<p class="kind">図譜</p>
+<h1>ハネネズミ</h1>
+<p class="sub">『生き物図譜』統1177年版　哺乳類の部</p>
+<dl class="meta"><dt>収録</dt><dd>『生き物図譜』統1177年版　哺乳類の部</dd><dt>分類</dt><dd>小型哺乳類</dd></dl>
+<figure><img src="../img/hanenezumi_young.png" alt="図版１　若い個体"><figcaption>図版１　若い個体。体毛の色が濃く、後肢の筋が張っている。</figcaption></figure>
+<figure><img src="../img/hanenezumi_old.png" alt="図版２　老齢の個体"><figcaption>図版２　老齢の個体。体毛が薄れ、背が丸くなる。</figcaption></figure>
+<h3>形態</h3>
+<p>小型の哺乳類で、体のわりに後肢が長く、尾は体をささえる役目をもつ。全体に灰褐色で、腹面は淡い。歯の形から植物質と小さな虫を食べるものとされる。</p>
+<h3>習性</h3>
+<p>よく跳ぶ。地面から枝へ、枝から枝へと跳び移り、ねらった場所に正確に着地する。この跳びつきの正確さは成長とともに増し、年を重ねた個体ほど決まった場所への跳びつきが安定するとされる。昼は巣穴や木のうろで休み、朝夕に活動することが多い。</p>
+<h3>寿命</h3>
+<p>寿命は約30年とされ、小型の哺乳類としては長い。飼育下での記録に基づく。</p>
+<h3>分布</h3>
+<p>草地と疎林の入り交じる地域に広く見られるとされる。詳しい分布の記録は十分でない。</p>
+<h3>備考</h3>
+<p>決まった的に跳びつく動きを長く覚えることから、運動学習の研究で広く用いられる。飼育は難しくなく、長期の観察に向く。</p>
+</div></main>
+<footer class="site"><div class="wrap"><span>国立自然誌博物館</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
+</body></html>
