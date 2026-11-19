@@ -1,80 +1,85 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>資料の案内 ― 資料の案内</title>
+<title>トータル</title>
 <style>
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
-a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:860px;margin:0 auto;padding:0 20px}
-header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
-header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
-header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
-header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
-nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
-nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
-nav.crumbs a{color:var(--muted)}
-main{padding:28px 0 48px}
-.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
-h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
-.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
-h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
-h3{font-size:16px;margin:24px 0 6px;font-weight:600}
-p{margin:0 0 1em;text-align:justify}
-dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
-dl.meta dt{color:var(--muted);white-space:nowrap}
-dl.meta dd{margin:0}
-.tbl{overflow-x:auto;margin:14px 0 18px}
-table{border-collapse:collapse;width:100%;font-size:16px}
-th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
-thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
-td.r,th.r{text-align:right;white-space:nowrap}
-td.c,th.c{text-align:center}
-tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
-td.r{font-variant-numeric:tabular-nums}
-.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
-.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
-.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
-.tadashigaki p{margin:0}
-.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
-.box p{margin:0}
-figure{margin:22px 0}
-figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
-figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
-ol,ul{padding-left:1.6em;margin:0 0 1em}
-ol li,ul li{margin:2px 0}
-hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
-ul.list{list-style:none;padding:0;margin:0}
-ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
-ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
-ul.list .t{font-size:17px}
-ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
-figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
-figure.chart svg text{font-family:inherit}
-.buy{margin:26px 0 10px}
-.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
-.buy a:hover{text-decoration:none;opacity:.9}
-.buy p{margin:0}
-.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
-.cart p{margin:0 0 .6em}
-.cart p:last-child{margin:0}
-footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
-footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
-footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
-footer.site a.mark:hover{opacity:1;text-decoration:none}
-@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
-
-:root{--bg:#f7f6f3;--fg:#222;--muted:#666;--rule:#d8d5cd;--panel:#fff;--accent:#333;--link:#333;
---head-bg:#f7f6f3;--head-fg:#222;--head-border:1px solid #d8d5cd;--font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--brand-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--title-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--fig-border:0;--fig-bg:transparent;--fig-pad:0}
-.org{margin:0 0 30px}
-.org h2{border-bottom:1px solid var(--rule);font-size:17px;letter-spacing:.2em}
-.org p.lead{font-size:14.5px;color:var(--muted);margin:0 0 6px}
+body{margin:0;background:#fff;color:#1f2328;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:16px;line-height:1.8;min-height:100vh;display:flex;flex-direction:column}
+a{color:#1a3f8a;text-decoration:none}a:hover{text-decoration:underline}
+.top{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px 20px 80px}
+.logo{font-size:56px;letter-spacing:.22em;font-weight:600;margin:0 0 6px;color:#1f2328}
+.logo b{color:#c8432b;font-weight:600}
+.tag{font-size:13px;letter-spacing:.3em;color:#6b7078;margin:0 0 34px}
+form.q{width:100%;max-width:620px;display:flex;border:1px solid #c9ccd1;border-radius:28px;padding:4px 6px 4px 22px;box-shadow:0 1px 6px rgba(0,0,0,.06);background:#fff}
+form.q:focus-within{box-shadow:0 2px 10px rgba(0,0,0,.14);border-color:#b5b9bf}
+form.q input{flex:1;border:0;outline:0;font:inherit;font-size:17px;padding:8px 0;background:transparent;min-width:0}
+form.q button{border:0;background:#1f2328;color:#fff;font:inherit;font-size:14px;letter-spacing:.2em;padding:0 20px 0 22px;border-radius:22px;cursor:pointer}
+.hint{margin:20px 0 0;font-size:13.5px;color:#6b7078}
+.hint a{margin:0 8px;color:#4b5058}
+.bar{display:none;border-bottom:1px solid #e3e5e8;background:#fff}
+.bar .wrap{display:flex;align-items:center;gap:22px;max-width:980px;margin:0 auto;padding:14px 20px}
+.bar .logo{font-size:24px;letter-spacing:.2em;margin:0;white-space:nowrap}
+.bar form.q{max-width:600px;padding:2px 4px 2px 18px;box-shadow:none}
+.bar form.q input{font-size:16px;padding:6px 0}
+.bar form.q button{padding:0 16px;font-size:13px}
+.res{display:none;max-width:980px;margin:0 auto;padding:18px 20px 70px;width:100%;flex:1}
+.stat{font-size:13px;color:#6b7078;margin:0 0 18px}
+.hit{max-width:640px;margin:0 0 26px}
+.hit .src{font-size:13px;color:#4b5058;margin:0 0 1px}
+.hit .src span{color:#6b7078}
+.hit .src span:before{content:"　›　"}
+.hit h3{font-size:19px;font-weight:500;line-height:1.5;margin:0 0 3px;font-family:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif}
+.hit p{font-size:14px;color:#3b4048;margin:0;line-height:1.7}
+.hit mark{background:transparent;color:#1f2328;font-weight:600}
+.none{color:#4b5058;font-size:15px;max-width:640px}
+.none p{margin:0 0 .6em}
+footer{border-top:1px solid #e3e5e8;font-size:12.5px;color:#6b7078}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;max-width:980px;margin:0 auto;padding:14px 20px 26px}
+footer a.mark{color:#6b7078;opacity:.55;font-size:12px;padding:6px 8px}
+footer a.mark:hover{opacity:1;text-decoration:none}
+body.has-q .top{display:none}
+body.has-q .bar,body.has-q .res{display:block}
+@media (max-width:560px){.logo{font-size:42px}.bar .wrap{flex-wrap:wrap;gap:10px}.bar .logo{font-size:20px}}
 </style></head>
-<body class="site-">
-<header class="site"><div class="wrap"><a class="brand" href="index.html">資料の案内</a><span class="tag"></span></div></header>
-
-<main><div class="wrap">
-<p class="kind">案内</p><h1>資料の案内</h1><p class="sub">各機関が公開している資料のうち、よく参照されるものをまとめています。機関名からそれぞれの一覧へ移れます。</p><section class="org"><h2><a href="toukeiin/index.html">統計院</a></h2><p class="lead">統計院が公表した調査結果と推計の表を掲げています。表の数値は推計値を含みます。</p><ul class="list"><li><span class="k">統計表</span><a class="t" href="toukeiin/koyou_dai12hyou.html">第12表　定年年齢の分布（従業員十人以上の事業所）</a><span class="y">統1177年</span></li><li><span class="k">統計表</span><a class="t" href="toukeiin/heikinjumyou_suikei.html">平均寿命の長期推計</a><span class="y">統1177年</span></li><li><span class="k">統計表</span><a class="t" href="toukeiin/seimeihyou.html">生命表（抜粋）</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="gakkai/index.html">神経科学会</a></h2><p class="lead">『神経科学会誌』各号の目次と論文の要旨を掲載しています。要旨までは無料で閲覧できます。</p><ul class="list"><li><span class="k">目次</span><a class="t" href="gakkai/mokuji_412_3.html">神経科学会誌　第412巻　第3号　目次</a><span class="y">統1177年</span></li><li><span class="k">論文</span><a class="t" href="gakkai/souki_1177.html">長期の運動学習に伴う樹状突起上の可塑性固定複合体の形成と、干渉課題への適応の予測</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="hakubutsukan/index.html">国立自然誌博物館</a></h2><p class="lead">『生き物図譜』の各項を図版とともに掲載しています。</p><ul class="list"><li><span class="k">図譜</span><a class="t" href="hakubutsukan/hanenezumi.html">ハネネズミ</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="garou/index.html">国立画廊</a></h2><p class="lead">国立画廊の所蔵品について、作品の情報と解説を掲載しています。</p><ul class="list"><li><span class="k">所蔵品</span><a class="t" href="garou/lune_bridge.html">リュネ橋の修繕</a><span class="y">統9世紀頃</span></li></ul></section><section class="org"><h2><a href="shoten/index.html">書店</a></h2><p class="lead">取り扱い書籍の書誌情報と内容紹介を掲載しています。</p><ul class="list"><li><span class="k">書誌</span><a class="t" href="shoten/sen_wo_hiku.html">線を引く ― 定年と年金の二百年</a><span class="y">統1152年</span></li><li><span class="k">書誌</span><a class="t" href="shoten/nou_wa_naze.html">脳はなぜ忘れないのか ― 守る仕組みの発見まで</a><span class="y">統1176年</span></li></ul></section><section class="org"><h2><a href="shakaihosho/index.html">社会保障研究所</a></h2><p class="lead">社会保障研究所が実施した調査の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="shakaihosho/koureisetai.html">高齢世帯の生活調査（統780年・統830年）</a><span class="y">統780年・統830年</span></li></ul></section><section class="org"><h2><a href="iryokeizai/index.html">医療経済研究機構</a></h2><p class="lead">医療経済研究機構がまとめた集計の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="iryokeizai/shochikubun.html">処置区分別平均寿命（統1177年）</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="rodoiinkai/index.html">労働委員会</a></h2><p class="lead">労働委員会が保管する記録の集計を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="rodoiinkai/sougikiroku.html">争議記録　長期集計（衰えを理由とする解雇をめぐる争議）</a><span class="y">長期集計</span></li></ul></section><section class="org"><h2><a href="iryohokencho/index.html">医療保険庁</a></h2><p class="lead">医療保険庁が公表する集計の概要を掲載しています。</p><ul class="list"><li><span class="k">資料</span><a class="t" href="iryohokencho/teinenkenshin.html">定年時健康診断集計（統1177年）</a><span class="y">統1177年</span></li></ul></section><section class="org"><h2><a href="shinbun/index.html">日々新報</a></h2><p class="lead">日刊紙『日々新報』の紙面を掲載しています。</p><ul class="list"><li><span class="k">一面</span><a class="t" href="shinbun/ichimen.html">統1178年10月7日（朝刊）　第一面</a><span class="y">統1178年10月7日</span></li><li><span class="k">科学面</span><a class="t" href="shinbun/kagaku_11men.html">統1178年10月7日（朝刊）　科学　第11面</a><span class="y">統1178年10月7日</span></li></ul></section>
-</div></main>
-<footer class="site"><div class="wrap"><span>資料の案内</span><a class="mark" href="_/index.html" title="※">※</a></div></footer>
+<body>
+<div class="top"><p class="logo">トータ<b>ル</b></p><p class="tag">資料検索</p><form class="q" action="index.html" method="get"><input type="search" name="q" autocomplete="off" aria-label="検索語"><button type="submit">検索</button></form><p class="hint"><a href="annai.html">資料の案内</a><a href="index.html?q=統計院">統計院</a><a href="index.html?q=日々新報">日々新報</a></p></div>
+<div class="bar"><div class="wrap"><a class="logo" href="index.html">トータ<b>ル</b></a><form class="q" action="index.html" method="get"><input type="search" name="q" autocomplete="off" aria-label="検索語"><button type="submit">検索</button></form></div></div>
+<div class="res" id="res"></div>
+<footer><div class="wrap"><span>トータル</span><a class="mark" href="_/index.html" title="※">※</a></div></footer>
+<script>var NAME='トータル';
+(function(){
+var qs=new URLSearchParams(location.search),q=(qs.get('q')||'').trim();
+var inputs=document.querySelectorAll('input[name=q]');
+inputs.forEach(function(i){i.value=q});
+if(!q){inputs[0].focus();return}
+document.body.classList.add('has-q');document.title=q+' ― '+NAME;
+function norm(s){return (s||'').normalize('NFKC').toLowerCase()}
+var words=norm(q).split(/[\s　]+/).filter(Boolean);
+fetch('search.json').then(function(r){return r.json()}).then(function(idx){
+  var hits=[];
+  idx.forEach(function(d){
+    var t=norm(d.t),o=norm(d.o),k=norm(d.k),b=norm(d.b),y=norm(d.y),score=0;
+    for(var i=0;i<words.length;i++){var w=words[i],s=0;
+      if(t.indexOf(w)>=0)s+=30;if(o.indexOf(w)>=0)s+=d.list?40:12;if(k.indexOf(w)>=0)s+=8;if(y.indexOf(w)>=0)s+=4;
+      var n=b.split(w).length-1;if(n)s+=Math.min(n,8)*2+1;
+      if(!s){score=0;break}score+=s}
+    if(score)hits.push([score,d])});
+  hits.sort(function(a,b){return b[0]-a[0]});
+  var res=document.getElementById('res'),h='';
+  if(!hits.length){
+    h='<div class="none"><p>「'+esc(q)+'」に該当する資料は公開されていません。</p><p>別の言葉で探すか、<a href="annai.html">資料の案内</a>から機関ごとの一覧をご覧ください。</p></div>';
+  }else{
+    h='<p class="stat">'+hits.length+' 件</p>';
+    hits.forEach(function(x){var d=x[1];
+      h+='<div class="hit"><p class="src">'+esc(d.o)+(d.k?'<span>'+esc(d.k)+'</span>':'')+(d.y?'<span>'+esc(d.y)+'</span>':'')+'</p><h3><a href="'+d.u+'">'+mark(d.t)+'</a></h3><p>'+snippet(d.b)+'</p></div>'});
+  }
+  res.innerHTML=h;
+});
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function mark(s){var e=esc(s);words.forEach(function(w){if(!w)return;var re=new RegExp(w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');e=e.replace(re,function(m){return '<mark>'+m+'</mark>'})});return e}
+function snippet(b){var nb=norm(b),pos=-1;for(var i=0;i<words.length;i++){var p=nb.indexOf(words[i]);if(p>=0&&(pos<0||p<pos))pos=p}
+  if(pos<0)return esc(b.slice(0,110))+(b.length>110?'…':'');
+  var st=Math.max(0,pos-40),en=Math.min(b.length,pos+100);return (st>0?'…':'')+mark(b.slice(st,en))+(en<b.length?'…':'')}
+})();
+</script>
 </body></html>
