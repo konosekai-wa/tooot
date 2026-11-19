@@ -62,6 +62,32 @@ footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)
 footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
 footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
 footer.site a.mark:hover{opacity:1;text-decoration:none}
+/* 紙の資料（第1回の直した後の画面に合わせた。11月20日） */
+.sheet{background:#55595e;padding:14px 18px 22px;margin:6px 0 28px;border-radius:2px}
+.sheet .vt{display:flex;flex-wrap:wrap;gap:4px 18px;color:#e3e5e8;font-family:"Hiragino Sans",sans-serif;font-size:12.5px;margin:0 0 12px;letter-spacing:.02em}
+.sheet .vt span:nth-child(2){margin-left:auto}
+.paper{background:#f3f2ee;color:#1c1e21;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;padding:34px 42px 22px;box-shadow:0 6px 24px rgba(0,0,0,.35);font-size:16px;line-height:1.75;letter-spacing:.02em}
+.paper .hd{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1c1e21;padding-bottom:6px;margin-bottom:16px;font-size:13.5px;letter-spacing:.06em}
+.paper .sec{font-size:16px;margin:0 0 4px}
+.paper .tno{font-size:21px;font-weight:600;line-height:1.5;margin:0 0 6px}
+.paper .tno b{margin-right:.8em}
+.paper .unit{text-align:right;font-size:13.5px;margin:0 0 4px}
+.paper table{font-size:15.5px;font-variant-numeric:tabular-nums}
+.paper thead th{color:#1c1e21;border-top:2px solid #1c1e21;border-bottom:1px solid #1c1e21;font-size:14px}
+.paper th,.paper td{border-bottom-color:#b9b6ad}
+.paper tr.sum td{border-top-color:#1c1e21;border-bottom-color:#1c1e21}
+.paper .note{color:#2a2c2f;font-size:13.5px;margin-top:10px}
+.paper .pg{text-align:center;font-size:13px;margin-top:16px;letter-spacing:.2em}
+.paper p{text-indent:1em}
+.paper .stampbox{display:inline-block;border:2.5px solid #c8432b;color:#c8432b;padding:2px 10px;font-weight:700;letter-spacing:.2em;transform:rotate(-3deg);font-size:14px}
+.paper .formhd{text-align:center;font-size:22px;letter-spacing:.3em;margin:6px 0 12px}
+.paper .formkv{display:grid;grid-template-columns:max-content 1fr max-content 1fr;gap:4px 14px;font-size:14.5px;border-bottom:1px solid #b9b6ad;padding-bottom:8px;margin-bottom:8px}
+.paper .judge{display:flex;align-items:center;gap:18px;margin-top:12px;font-size:14px}
+.paper .judge b{border:1.5px solid #1c1e21;padding:4px 18px;letter-spacing:.4em;font-size:18px}
+.paper .toc td.p{text-align:right;white-space:nowrap}
+.paper .kw{font-size:14px;margin-top:12px}
+.paper .ft{display:flex;justify-content:space-between;border-top:1px solid #b9b6ad;margin-top:14px;padding-top:6px;font-size:13px}
+@media (max-width:560px){.paper{padding:22px 18px 16px}.paper .formkv{grid-template-columns:max-content 1fr}.sheet{padding:10px 8px 14px}}
 @media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
 
 :root{--bg:#fbfaf6;--fg:#23221f;--muted:#6b675d;--rule:#d8d3c6;--panel:#f3f0e7;--accent:#2f5a4d;--link:#2f5a4d;
@@ -78,10 +104,16 @@ dl.meta{border:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--
 <p class="kind">原著論文</p>
 <h1>長期の運動学習に伴う樹状突起上の可塑性固定複合体の形成と、干渉課題への適応の予測</h1>
 <dl class="meta"><dt>著者</dt><dd>総木智行<sup>1,2</sup>　ほか</dd><dt>所属</dt><dd><sup>1</sup> 大学医学部 神経科学講座　<sup>2</sup> 神経可塑性研究所</dd><dt>掲載</dt><dd>『神経科学会誌』第412巻 第3号、pp. 1187–1203（統1177年）</dd><dt>受付</dt><dd>統1176年11月9日</dd><dt>受理</dt><dd>統1177年2月22日</dd><dt>キーワード</dt><dd>運動学習／樹状突起／可塑性固定複合体／干渉課題／長期記憶</dd></dl>
-<h3>要旨</h3>
+<div class="sheet">
+<div class="vt"><span>神経科学会誌 第412巻 第3号　p.1187</span><span>⇩ PDF</span></div>
+<div class="paper">
+<div class="hd"><span>神経科学会誌　第412巻　第3号　統1177年</span><span>pp. 1187–1203</span></div><div class="sec" style="letter-spacing:.6em">原著論文</div><div class="tno" style="font-size:23px">長期の運動学習に伴う樹状突起上の可塑性固定複合体の形成と、干渉課題への適応の予測</div><div style="font-size:17px;margin:6px 0 2px">総木智行<sup>1,2</sup>　ほか</div><div style="font-size:13.5px;margin-bottom:12px"><sup>1</sup> 大学医学部 神経科学講座　<sup>2</sup> 神経可塑性研究所　　連絡先：第一著者（所属１）</div><div style="border-top:1px solid #1c1e21;padding-top:8px;letter-spacing:.6em;font-size:15px;margin-bottom:6px">要旨</div>
 <p>長期にわたる運動学習が、その後の学習にどのような制約を与えるかは十分に明らかでない。本研究では、小型哺乳類ハネネズミを用い、所定の的に跳びつく運動を数年にわたり訓練した個体の学習特性を検討した。長期訓練個体は訓練済みの運動を高い精度で遂行したが、的の位置をわずかに移動させる干渉課題への適応は、若齢の短期訓練個体に比べて著しく遅かった（短期訓練個体で数日、長期訓練個体で数週間）。一方、訓練済みの運動と無関係な独立課題の習得には両群で差を認めなかった。</p>
 <p>運動の微調整を担う回路の神経細胞を調べたところ、長期訓練個体では一部のシナプスが書き換えを受けにくくなっており、その部位に特定のタンパク質群からなる安定した複合体が認められた。本稿ではこれを暫定的に「可塑性固定複合体」と呼ぶ。複合体は長期間使用されたシナプスほど多かった。神経細胞自身に活動の履歴を記録させ、事後に読み出す手法を用いることで、干渉課題で適応に時間を要する個体を学習前に予測することができ、その精度は年齢による予測を上回った。複合体を可逆的に弱める操作により新規の運動の習得は促進されたが、同時に既習の運動の精度は低下した。</p>
 <p>ヒト脳組織の標本においても同様の複合体が同定されたが、その機能の確認は動物においてのみ行われている。また、加齢に伴い神経細胞に蓄積する異常が複合体とともに固定されることを示唆する所見を得た。本研究は長期学習と可塑性の関係を示すものであり、個体の寿命や加齢一般への含意については、本研究の範囲を超える今後の検討課題である。</p>
+<div class="kw"><b>キーワード</b>　運動学習／樹状突起／可塑性固定複合体／干渉課題／長期記憶</div><div class="ft"><span>受付 統1176年11月9日／受理 統1177年2月22日</span><span>© 神経科学会</span></div>
+</div>
+</div>
 <figure><img src="../img/neuron.png" alt="図1"><figcaption>図1　運動の微調整を担う回路の神経細胞の模式図。樹状突起上の着色部が可塑性固定複合体の分布を示す。長期間使用されたシナプスほど複合体が多く、細胞内に蓄積した異常が複合体とともに固定されることが示唆された。</figcaption></figure>
 <h3>引用形式</h3>
 <p>総木智行 ほか（統1177年）「長期の運動学習に伴う樹状突起上の可塑性固定複合体の形成と、干渉課題への適応の予測」『神経科学会誌』第412巻 第3号、pp. 1187–1203。</p>

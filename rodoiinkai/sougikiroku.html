@@ -62,6 +62,32 @@ footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)
 footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
 footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
 footer.site a.mark:hover{opacity:1;text-decoration:none}
+/* 紙の資料（第1回の直した後の画面に合わせた。11月20日） */
+.sheet{background:#55595e;padding:14px 18px 22px;margin:6px 0 28px;border-radius:2px}
+.sheet .vt{display:flex;flex-wrap:wrap;gap:4px 18px;color:#e3e5e8;font-family:"Hiragino Sans",sans-serif;font-size:12.5px;margin:0 0 12px;letter-spacing:.02em}
+.sheet .vt span:nth-child(2){margin-left:auto}
+.paper{background:#f3f2ee;color:#1c1e21;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;padding:34px 42px 22px;box-shadow:0 6px 24px rgba(0,0,0,.35);font-size:16px;line-height:1.75;letter-spacing:.02em}
+.paper .hd{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1c1e21;padding-bottom:6px;margin-bottom:16px;font-size:13.5px;letter-spacing:.06em}
+.paper .sec{font-size:16px;margin:0 0 4px}
+.paper .tno{font-size:21px;font-weight:600;line-height:1.5;margin:0 0 6px}
+.paper .tno b{margin-right:.8em}
+.paper .unit{text-align:right;font-size:13.5px;margin:0 0 4px}
+.paper table{font-size:15.5px;font-variant-numeric:tabular-nums}
+.paper thead th{color:#1c1e21;border-top:2px solid #1c1e21;border-bottom:1px solid #1c1e21;font-size:14px}
+.paper th,.paper td{border-bottom-color:#b9b6ad}
+.paper tr.sum td{border-top-color:#1c1e21;border-bottom-color:#1c1e21}
+.paper .note{color:#2a2c2f;font-size:13.5px;margin-top:10px}
+.paper .pg{text-align:center;font-size:13px;margin-top:16px;letter-spacing:.2em}
+.paper p{text-indent:1em}
+.paper .stampbox{display:inline-block;border:2.5px solid #c8432b;color:#c8432b;padding:2px 10px;font-weight:700;letter-spacing:.2em;transform:rotate(-3deg);font-size:14px}
+.paper .formhd{text-align:center;font-size:22px;letter-spacing:.3em;margin:6px 0 12px}
+.paper .formkv{display:grid;grid-template-columns:max-content 1fr max-content 1fr;gap:4px 14px;font-size:14.5px;border-bottom:1px solid #b9b6ad;padding-bottom:8px;margin-bottom:8px}
+.paper .judge{display:flex;align-items:center;gap:18px;margin-top:12px;font-size:14px}
+.paper .judge b{border:1.5px solid #1c1e21;padding:4px 18px;letter-spacing:.4em;font-size:18px}
+.paper .toc td.p{text-align:right;white-space:nowrap}
+.paper .kw{font-size:14px;margin-top:12px}
+.paper .ft{display:flex;justify-content:space-between;border-top:1px solid #b9b6ad;margin-top:14px;padding-top:6px;font-size:13px}
+@media (max-width:560px){.paper{padding:22px 18px 16px}.paper .formkv{grid-template-columns:max-content 1fr}.sheet{padding:10px 8px 14px}}
 @media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
 
 :root{--bg:#fbfbfa;--fg:#222;--muted:#666;--rule:#cfcfcb;--panel:#f2f2ef;--accent:#444;--link:#333;
@@ -78,6 +104,10 @@ h1{font-size:23px;letter-spacing:.06em}
 <dl class="meta"><dt>記録</dt><dd>争議記録</dd><dt>集計</dt><dd>雇い主と働く人の争いのうち、衰えを理由に辞めさせるかどうかをめぐるものの割合</dd></dl>
 <h3>要約</h3>
 <p>労働委員会は、雇い主と働く人の間の争いを記録している。年金の制度ができる前、その争いの三件に一件は、働く人の衰えを理由に辞めさせるかどうかをめぐるものであった。定年が普及したのちには、この種の争いは十件に一件にまで減った。定年という線が引かれたことで、衰えの有無を個別に争う必要が小さくなったものと考えられる。本集計は、記録の残る範囲で長期にわたり整理したものである。</p>
+<div class="sheet">
+<div class="vt"><span>争議記録　長期集計.pdf</span><span>21 / 140 頁</span><span>⇩ PDF</span></div>
+<div class="paper">
+<div class="hd"><span>争議記録　長期集計　第３編　解雇をめぐる争議</span><span>労　働　委　員　会</span></div><div class="tno"><b>第７表</b>衰えを理由とする解雇をめぐる争議の割合</div><div class="unit">（労働委員会に持ち込まれた争議に占める割合）</div>
 <div class="tbl"><table>
 <thead><tr><th>時期</th><th class="r">衰えを理由とする解雇をめぐる争議の割合</th></tr></thead>
 <tbody>
@@ -85,6 +115,9 @@ h1{font-size:23px;letter-spacing:.06em}
 <tr><td>定年の普及後</td><td class="r">十件に一件</td></tr>
 </tbody></table></div>
 <div class="note"><p>注）集計の対象は労働委員会に持ち込まれた争議に限る。古い時期の記録は欠けがある。</p></div>
+<div class="pg">— 21 —</div>
+</div>
+</div>
 </div></main>
 <footer class="site"><div class="wrap"><span>労働委員会</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
 </body></html>

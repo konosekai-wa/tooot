@@ -62,6 +62,32 @@ footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)
 footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
 footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
 footer.site a.mark:hover{opacity:1;text-decoration:none}
+/* 紙の資料（第1回の直した後の画面に合わせた。11月20日） */
+.sheet{background:#55595e;padding:14px 18px 22px;margin:6px 0 28px;border-radius:2px}
+.sheet .vt{display:flex;flex-wrap:wrap;gap:4px 18px;color:#e3e5e8;font-family:"Hiragino Sans",sans-serif;font-size:12.5px;margin:0 0 12px;letter-spacing:.02em}
+.sheet .vt span:nth-child(2){margin-left:auto}
+.paper{background:#f3f2ee;color:#1c1e21;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;padding:34px 42px 22px;box-shadow:0 6px 24px rgba(0,0,0,.35);font-size:16px;line-height:1.75;letter-spacing:.02em}
+.paper .hd{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1c1e21;padding-bottom:6px;margin-bottom:16px;font-size:13.5px;letter-spacing:.06em}
+.paper .sec{font-size:16px;margin:0 0 4px}
+.paper .tno{font-size:21px;font-weight:600;line-height:1.5;margin:0 0 6px}
+.paper .tno b{margin-right:.8em}
+.paper .unit{text-align:right;font-size:13.5px;margin:0 0 4px}
+.paper table{font-size:15.5px;font-variant-numeric:tabular-nums}
+.paper thead th{color:#1c1e21;border-top:2px solid #1c1e21;border-bottom:1px solid #1c1e21;font-size:14px}
+.paper th,.paper td{border-bottom-color:#b9b6ad}
+.paper tr.sum td{border-top-color:#1c1e21;border-bottom-color:#1c1e21}
+.paper .note{color:#2a2c2f;font-size:13.5px;margin-top:10px}
+.paper .pg{text-align:center;font-size:13px;margin-top:16px;letter-spacing:.2em}
+.paper p{text-indent:1em}
+.paper .stampbox{display:inline-block;border:2.5px solid #c8432b;color:#c8432b;padding:2px 10px;font-weight:700;letter-spacing:.2em;transform:rotate(-3deg);font-size:14px}
+.paper .formhd{text-align:center;font-size:22px;letter-spacing:.3em;margin:6px 0 12px}
+.paper .formkv{display:grid;grid-template-columns:max-content 1fr max-content 1fr;gap:4px 14px;font-size:14.5px;border-bottom:1px solid #b9b6ad;padding-bottom:8px;margin-bottom:8px}
+.paper .judge{display:flex;align-items:center;gap:18px;margin-top:12px;font-size:14px}
+.paper .judge b{border:1.5px solid #1c1e21;padding:4px 18px;letter-spacing:.4em;font-size:18px}
+.paper .toc td.p{text-align:right;white-space:nowrap}
+.paper .kw{font-size:14px;margin-top:12px}
+.paper .ft{display:flex;justify-content:space-between;border-top:1px solid #b9b6ad;margin-top:14px;padding-top:6px;font-size:13px}
+@media (max-width:560px){.paper{padding:22px 18px 16px}.paper .formkv{grid-template-columns:max-content 1fr}.sheet{padding:10px 8px 14px}}
 @media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
 
 :root{--bg:#fff;--fg:#1f2328;--muted:#5a6068;--rule:#c9ccd1;--panel:#f6f7f8;--accent:#1f3f73;--link:#1f3f73;
@@ -78,6 +104,10 @@ table{font-size:16px}
 <h1>第12表　定年年齢の分布（従業員十人以上の事業所）</h1>
 <p class="sub">雇用実態調査報告書（統1177年）　第Ⅲ章　定年制度　３　定年年齢</p>
 <dl class="meta"><dt>調査名</dt><dd>雇用実態調査（統1177年）</dd><dt>掲載</dt><dd>報告書 第Ⅲ章　47頁</dd><dt>単位</dt><dd>事業所、％</dd><dt>公表年</dt><dd>統1177年</dd></dl>
+<div class="sheet">
+<div class="vt"><span>雇用実態調査報告書（統1177年）.pdf</span><span>47 / 212 頁</span><span>⇩ PDF</span><span>⇩ 表計算形式</span></div>
+<div class="paper">
+<div class="hd"><span>雇用実態調査報告書（統1177年）　第Ⅲ章　定年制度</span><span>統　計　院</span></div><div class="sec">３　定年年齢</div><div class="tno"><b>第12表</b>定年年齢の分布（従業員十人以上の事業所）</div><div class="unit">（単位：事業所、％）</div>
 <div class="tbl"><table>
 <thead><tr><th>区分</th><th class="r">事業所数（復元値）</th><th class="r">構成比</th></tr></thead>
 <tbody>
@@ -87,6 +117,9 @@ table{font-size:16px}
 <tr class="sum"><td><strong>計</strong></td><td class="r"><strong>12,480</strong></td><td class="r"><strong>100.0</strong></td></tr>
 </tbody></table></div>
 <div class="note"><p>注１）調査対象は全産業（公務を除く）の従業員十人以上の事業所から抽出した 38,200 事業所。有効回答 12,480 事業所（有効回答率 32.7％）。事業所数は抽出率の逆数により復元した推計値。</p><p>注２）構成比は有効回答事業所数を 100 とした割合。四捨五入のため、内訳の合計が計と一致しないことがある。</p><p>注３）「二百歳以後も契約を更新して雇用」は、定年到達後の再雇用・嘱託等の制度を設けている事業所。</p><p>資料出所：統計院「雇用実態調査」（統1177年）事業所票　問１２。</p></div>
+<div class="pg">— 47 —</div>
+</div>
+</div>
 <figure class="chart" role="img" aria-label="定年年齢の分布（構成比）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 164" width="100%" style="display:block;max-width:640px;margin:0 auto;font-family:inherit"><text x="224" y="39.0" font-size="15" fill="var(--fg)" text-anchor="end">二百歳を定年とする</text><rect x="236" y="22" width="287.8" height="24" fill="var(--accent)"/><text x="531.8" y="39.0" font-size="15" fill="var(--fg)">90.5</text><text x="224" y="79.0" font-size="15" fill="var(--fg)" text-anchor="end">定年を定めない</text><rect x="236" y="62" width="17.5" height="24" fill="var(--accent)"/><text x="261.5" y="79.0" font-size="15" fill="var(--fg)">5.5</text><text x="224" y="119.0" font-size="15" fill="var(--fg)" text-anchor="end">二百歳以後も契約を更新して雇用</text><rect x="236" y="102" width="12.7" height="24" fill="var(--accent)"/><text x="256.7" y="119.0" font-size="15" fill="var(--fg)">4.0</text><line x1="236" y1="14" x2="236" y2="134" stroke="var(--fg)" stroke-width="1.2"/><text x="636" y="156" font-size="13" fill="var(--muted)" text-anchor="end">（単位：％）</text></svg></figure>
 <div class="tadashigaki">
 <p>本表の数値は推計値を含む。転載の際は資料出所を明記のこと。</p>

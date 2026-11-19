@@ -1,105 +1,86 @@
 <!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>一覧 ― 日々新報</title>
+<title>記事アーカイブ ― 日々新報デジタル</title>
 <style>
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
-a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:860px;margin:0 auto;padding:0 20px}
-header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
-header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
-header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
-header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
-nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
-nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
-nav.crumbs a{color:var(--muted)}
-main{padding:28px 0 48px}
-.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
-h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
-.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
-h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
-h3{font-size:16px;margin:24px 0 6px;font-weight:600}
-p{margin:0 0 1em;text-align:justify}
-dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
-dl.meta dt{color:var(--muted);white-space:nowrap}
-dl.meta dd{margin:0}
-.tbl{overflow-x:auto;margin:14px 0 18px}
-table{border-collapse:collapse;width:100%;font-size:16px}
-th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
-thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
-td.r,th.r{text-align:right;white-space:nowrap}
-td.c,th.c{text-align:center}
-tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
-td.r{font-variant-numeric:tabular-nums}
-.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
-.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
-.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
-.tadashigaki p{margin:0}
-.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
-.box p{margin:0}
-figure{margin:22px 0}
-figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
-figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
-ol,ul{padding-left:1.6em;margin:0 0 1em}
-ol li,ul li{margin:2px 0}
-hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
-ul.list{list-style:none;padding:0;margin:0}
-ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
-ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
-ul.list .t{font-size:17px}
-ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
-figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
-figure.chart svg text{font-family:inherit}
-.buy{margin:26px 0 10px}
-.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
-.buy a:hover{text-decoration:none;opacity:.9}
-.buy p{margin:0}
-.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
-.cart p{margin:0 0 .6em}
-.cart p:last-child{margin:0}
-footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
-footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
-footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
-footer.site a.mark:hover{opacity:1;text-decoration:none}
-@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
-
-:root{--bg:#f1ece0;--fg:#1f1d19;--muted:#5c5648;--rule:#8f8775;--panel:#ebe4d3;--accent:#8a2f1f;--link:#1f1d19;
---head-bg:#f1ece0;--head-fg:#1f1d19;--head-border:3px double #1f1d19;--font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--brand-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--title-font:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;--fig-border:1px solid #8f8775;--fig-bg:#f7f3ea;--fig-pad:4px}
-header.site .wrap{justify-content:center;padding-top:22px;padding-bottom:14px}
-header.site .brand{font-size:40px;letter-spacing:.6em;font-weight:700;margin-right:-.6em}
-header.site .tag{display:none}
-nav.crumbs{border-bottom:1px solid var(--rule)}
-.kind{display:none}
-h1{font-size:14px;font-weight:400;letter-spacing:.14em;color:var(--muted);border-bottom:1px solid var(--rule);padding-bottom:6px;margin-bottom:18px;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
-.sub{display:none}
-dl.meta{display:none}
-.lead{display:grid;grid-template-columns:1.25fr 1fr;gap:10px 26px;padding-bottom:18px;border-bottom:1px solid var(--rule);margin-bottom:18px}
-.lead h3{grid-column:1/-1;font-size:34px;line-height:1.3;margin:0 0 4px;border:0;letter-spacing:.04em;font-weight:700}
-.lead h4{grid-column:1/-1;font-size:17px;font-weight:400;margin:0 0 8px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:6px 0}
-.lead .txt p{font-size:15.5px;line-height:1.8;text-align:justify}
-.lead figure{margin:0;align-self:start}
-.lead figcaption{text-align:center}
-.kiji-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 22px;padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:14px}
-.kiji{padding:0 0 12px}
-.kiji+.kiji{border-left:1px solid var(--rule);padding-left:22px;margin-left:-11px}
-.kiji h3{font-size:21px;line-height:1.35;margin:0 0 6px;font-weight:700;letter-spacing:.02em}
-.kiji h4{font-size:14.5px;font-weight:400;margin:0 0 8px;color:var(--muted)}
-.kiji p{font-size:14.5px;line-height:1.75;text-align:justify}
-.kiji p:last-child{margin:0}
-.ran{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;font-size:14px}
-.ran h3{font-size:14px;letter-spacing:.3em;margin:0 0 4px;font-weight:700;border-bottom:1px solid var(--rule);padding-bottom:2px}
-.ran p{margin:0 0 6px;line-height:1.7}
-.more a{font-size:13.5px;color:var(--accent)}
-.more{margin:0}
-main article h2{font-size:30px;border:0;line-height:1.35;margin:0 0 6px}
-@media (max-width:640px){header.site .brand{font-size:30px}.lead{grid-template-columns:1fr}.lead h3{font-size:26px}.kiji-grid{grid-template-columns:1fr}.kiji+.kiji{border-left:0;padding-left:0;margin-left:0;border-top:1px solid var(--rule);padding-top:12px}.ran{grid-template-columns:1fr}}
+body{margin:0;background:#fff;color:#222;font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:17px;line-height:1.85}
+a{color:#222;text-decoration:none}a:hover{text-decoration:underline}
+.w{max-width:1180px;margin:0 auto;padding:0 24px}
+.dg-head{border-bottom:1px solid #e0e0e0}
+.dg-head .w{display:flex;align-items:center;height:64px}
+.dg-logo{font-family:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;font-size:30px;font-weight:600;letter-spacing:.12em;color:#1c1e21}
+.dg-logo small{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;font-size:14px;font-weight:400;letter-spacing:.05em;color:#777;margin-left:12px}
+.dg-acct{margin-left:auto;font-size:14px;color:#555;white-space:nowrap}
+.dg-acct b{background:#b0352a;color:#fff;font-weight:400;padding:5px 12px;border-radius:3px;margin-left:6px}
+.dg-tabs{border-bottom:1px solid #e0e0e0;overflow-x:auto;white-space:nowrap}
+.dg-tabs .w{display:flex;height:46px;align-items:stretch;font-size:16px;color:#333}
+.dg-tabs span,.dg-tabs a{display:flex;align-items:center;padding:0 14px;border-bottom:3px solid transparent;color:#333}
+.dg-tabs .on{color:#b0352a;border-bottom-color:#b0352a}
+.dg-body{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:44px;padding-top:24px;padding-bottom:50px}
+.badge{font-size:14px;color:#b0352a;margin:0 0 6px;letter-spacing:.04em}
+.badge span+span:before{content:"　"}
+h1.hd{font-family:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;font-size:34px;line-height:1.4;font-weight:600;margin:0 0 6px;letter-spacing:.02em}
+.sb{font-size:19px;color:#444;margin:0 0 10px;line-height:1.6}
+.ml{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:14px;color:#777;margin:0 0 18px;padding-bottom:12px;border-bottom:1px solid #eee}
+.ml .tools{margin-left:auto;color:#999}
+figure.ph{margin:0 0 18px}
+figure.ph img{width:100%;display:block}
+figure.ph figcaption{font-size:14px;color:#666;margin-top:6px;line-height:1.6}
+.art p{margin:0 0 1em;text-indent:1em;text-align:justify}
+.fade{height:110px;margin-top:-110px;position:relative;background:linear-gradient(rgba(255,255,255,0),#fff)}
+.pay{border:1px solid #d8d8d8;background:#faf9f6;padding:20px 24px;text-align:center;font-size:15px;color:#444;margin:6px 0 20px}
+.pay .btn{display:inline-block;background:#b0352a;color:#fff;padding:8px 28px;border-radius:3px;margin-top:12px}
+.pay .lg{color:#b0352a;margin-left:14px}
+.rel{margin-top:26px;font-size:15px}
+.rel h2{font-size:15px;color:#555;font-weight:600;margin:0 0 6px;border-bottom:1px solid #eee;padding-bottom:4px}
+.rel a{display:block;padding:6px 0;color:#1d4f7a}
+aside h2{font-size:17px;font-weight:600;border-bottom:2px solid #222;padding-bottom:6px;margin:0}
+aside ol{list-style:none;margin:0;padding:0}
+aside li{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid #e6e6e6;font-size:15px;line-height:1.5}
+aside li b{color:#b0352a;font-size:19px;width:18px;flex:none}
+aside .box2{margin-top:28px;font-size:13.5px;color:#666;border:1px solid #e6e6e6;padding:12px 14px;line-height:1.7}
+ul.idx{list-style:none;padding:0;margin:0}
+ul.idx li{padding:14px 0;border-bottom:1px solid #eee}
+ul.idx .k{font-size:13px;color:#b0352a;margin-right:10px}
+ul.idx .t{font-family:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;font-size:19px;font-weight:600}
+ul.idx .y{font-size:13px;color:#888;margin-left:10px}
+h1.sec{font-size:22px;font-weight:600;margin:0 0 4px}
+p.secsub{font-size:14px;color:#777;margin:0 0 16px}
+/* 紙面ビューアー（第1回の紙面をそのまま紙の色で見せる） */
+.viewer{background:#3b3d40;padding:18px;border-radius:2px}
+.viewer .vbar{display:flex;gap:18px;color:#cfd2d6;font-size:13.5px;margin:0 0 12px}
+.viewer .vbar span:last-child{margin-left:auto}
+.shimen{background:#f1ece0;color:#1f1d19;font-family:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;padding:26px 30px 20px;box-shadow:0 4px 18px rgba(0,0,0,.35)}
+.shimen .mast{text-align:center;border-bottom:3px double #1f1d19;padding-bottom:8px;margin-bottom:10px}
+.shimen .mast b{font-size:40px;letter-spacing:.6em;margin-right:-.6em}
+.shimen .mast div{font-size:13px;color:#5c5648;letter-spacing:.1em;display:flex;justify-content:space-between;border-top:1px solid #8f8775;margin-top:6px;padding-top:4px}
+.shimen h2{font-size:30px;border:0;line-height:1.35;margin:0 0 6px}
+.shimen .lead{display:grid;grid-template-columns:1.25fr 1fr;gap:10px 26px;padding-bottom:18px;border-bottom:1px solid #8f8775;margin-bottom:18px}
+.shimen .lead h3{grid-column:1/-1;font-size:34px;line-height:1.3;margin:0 0 4px;letter-spacing:.04em;font-weight:700}
+.shimen .lead h4{grid-column:1/-1;font-size:17px;font-weight:400;margin:0 0 8px;color:#5c5648;border-top:1px solid #8f8775;border-bottom:1px solid #8f8775;padding:6px 0}
+.shimen .lead .txt p{font-size:15.5px;line-height:1.8;text-align:justify;margin:0 0 1em}
+.shimen .lead figure{margin:0;align-self:start}
+.shimen figure img{max-width:100%;border:1px solid #8f8775;background:#f7f3ea;padding:4px}
+.shimen figcaption{font-size:13px;color:#5c5648;text-align:center}
+.shimen .kiji-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0 22px;padding-bottom:14px;border-bottom:1px solid #8f8775;margin-bottom:14px}
+.shimen .kiji{padding:0 0 12px}
+.shimen .kiji+.kiji{border-left:1px solid #8f8775;padding-left:22px;margin-left:-11px}
+.shimen .kiji h3{font-size:21px;line-height:1.35;margin:0 0 6px;font-weight:700}
+.shimen .kiji h4{font-size:14.5px;font-weight:400;margin:0 0 8px;color:#5c5648}
+.shimen .kiji p{font-size:14.5px;line-height:1.75;text-align:justify;margin:0 0 .8em}
+.shimen .ran{display:grid;grid-template-columns:1fr 1fr;gap:0 22px;font-size:14px}
+.shimen .ran h3{font-size:14px;letter-spacing:.3em;margin:0 0 4px;font-weight:700;border-bottom:1px solid #8f8775;padding-bottom:2px}
+.shimen .ran p{margin:0 0 6px;line-height:1.7}
+.shimen .more{margin:0}.shimen .more a{font-size:13.5px;color:#8a2f1f}
+footer.site{border-top:1px solid #e0e0e0;font-size:12.5px;color:#888}
+footer.site .w{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:#888;opacity:.55;font-size:12px;padding:6px 8px}
+@media (max-width:900px){.dg-body{grid-template-columns:1fr}h1.hd{font-size:26px}.shimen .lead,.shimen .kiji-grid,.shimen .ran{grid-template-columns:1fr}.shimen .kiji+.kiji{border-left:0;padding-left:0;margin-left:0;border-top:1px solid #8f8775;padding-top:12px}.dg-acct{font-size:12px}}
 </style></head>
 <body class="site-shinbun">
-<header class="site"><div class="wrap"><a class="brand" href="index.html">日々新報</a><span class="tag">電子版</span></div></header>
-
-<main><div class="wrap">
-<p class="kind">一覧</p><h1>電子版</h1><p class="sub">日刊紙『日々新報』の紙面を掲載しています。</p><ul class="list"><li><span class="k">一面</span><a class="t" href="ichimen.html">統1178年10月7日（朝刊）　第一面</a><span class="y">統1178年10月7日</span></li><li><span class="k">科学面</span><a class="t" href="kagaku_11men.html">統1178年10月7日（朝刊）　科学　第11面</a><span class="y">統1178年10月7日</span></li></ul>
-</div></main>
-<footer class="site"><div class="wrap"><span>日々新報</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
+<header class="dg-head"><div class="w"><a class="dg-logo" href="index.html">日々新報<small>デジタル</small></a><span class="dg-acct">ログイン　|<b>会員登録</b></span></div></header>
+<nav class="dg-tabs"><div class="w"><a class="on" href="index.html">トップ</a><span>速報</span><span>政治</span><span>経済</span><span>社会</span><span>国際</span><span>スポーツ</span><span>科学</span><span>くらし</span><span>オピニオン</span><span>紙面</span></div></nav>
+<div class="w dg-body"><main><h1 class="sec">記事アーカイブ</h1><p class="secsub">日刊紙『日々新報』の記事と紙面を掲載しています。過去の記事は記事アーカイブから読めます。</p><ul class="idx"><li><span class="k">一面</span><a class="t" href="ichimen.html">統1178年10月7日（朝刊）　第一面</a><span class="y">統1178年10月7日</span></li><li><span class="k">科学面</span><a class="t" href="kagaku_11men.html">統1178年10月7日（朝刊）　科学　第11面</a><span class="y">統1178年10月7日</span></li><li><span class="k">アーカイブ　統973年</span><a class="t" href="0973-0512-sports001.html">身体強化を使う選手、急増</a><span class="y">統973年5月12日</span></li><li><span class="k">速報　統1000年</span><a class="t" href="1000-0814-sports0417.html">大競技祭の長距離決勝で多重転倒　選手8人負傷、ダナン選手も</a><span class="y">統1000年8月14日</span></li></ul></main></div>
+<footer class="site"><div class="w"><span>日々新報</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
 </body></html>

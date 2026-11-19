@@ -62,6 +62,32 @@ footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)
 footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
 footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
 footer.site a.mark:hover{opacity:1;text-decoration:none}
+/* 紙の資料（第1回の直した後の画面に合わせた。11月20日） */
+.sheet{background:#55595e;padding:14px 18px 22px;margin:6px 0 28px;border-radius:2px}
+.sheet .vt{display:flex;flex-wrap:wrap;gap:4px 18px;color:#e3e5e8;font-family:"Hiragino Sans",sans-serif;font-size:12.5px;margin:0 0 12px;letter-spacing:.02em}
+.sheet .vt span:nth-child(2){margin-left:auto}
+.paper{background:#f3f2ee;color:#1c1e21;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;padding:34px 42px 22px;box-shadow:0 6px 24px rgba(0,0,0,.35);font-size:16px;line-height:1.75;letter-spacing:.02em}
+.paper .hd{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1c1e21;padding-bottom:6px;margin-bottom:16px;font-size:13.5px;letter-spacing:.06em}
+.paper .sec{font-size:16px;margin:0 0 4px}
+.paper .tno{font-size:21px;font-weight:600;line-height:1.5;margin:0 0 6px}
+.paper .tno b{margin-right:.8em}
+.paper .unit{text-align:right;font-size:13.5px;margin:0 0 4px}
+.paper table{font-size:15.5px;font-variant-numeric:tabular-nums}
+.paper thead th{color:#1c1e21;border-top:2px solid #1c1e21;border-bottom:1px solid #1c1e21;font-size:14px}
+.paper th,.paper td{border-bottom-color:#b9b6ad}
+.paper tr.sum td{border-top-color:#1c1e21;border-bottom-color:#1c1e21}
+.paper .note{color:#2a2c2f;font-size:13.5px;margin-top:10px}
+.paper .pg{text-align:center;font-size:13px;margin-top:16px;letter-spacing:.2em}
+.paper p{text-indent:1em}
+.paper .stampbox{display:inline-block;border:2.5px solid #c8432b;color:#c8432b;padding:2px 10px;font-weight:700;letter-spacing:.2em;transform:rotate(-3deg);font-size:14px}
+.paper .formhd{text-align:center;font-size:22px;letter-spacing:.3em;margin:6px 0 12px}
+.paper .formkv{display:grid;grid-template-columns:max-content 1fr max-content 1fr;gap:4px 14px;font-size:14.5px;border-bottom:1px solid #b9b6ad;padding-bottom:8px;margin-bottom:8px}
+.paper .judge{display:flex;align-items:center;gap:18px;margin-top:12px;font-size:14px}
+.paper .judge b{border:1.5px solid #1c1e21;padding:4px 18px;letter-spacing:.4em;font-size:18px}
+.paper .toc td.p{text-align:right;white-space:nowrap}
+.paper .kw{font-size:14px;margin-top:12px}
+.paper .ft{display:flex;justify-content:space-between;border-top:1px solid #b9b6ad;margin-top:14px;padding-top:6px;font-size:13px}
+@media (max-width:560px){.paper{padding:22px 18px 16px}.paper .formkv{grid-template-columns:max-content 1fr}.sheet{padding:10px 8px 14px}}
 @media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
 
 :root{--bg:#fff;--fg:#1f2328;--muted:#5a6068;--rule:#c9ccd1;--panel:#f6f7f8;--accent:#1f3f73;--link:#1f3f73;
@@ -79,6 +105,10 @@ table{font-size:16px}
 <p class="sub">人口動態資料　長期系列　第４表　平均寿命（男女計）の推移</p>
 <dl class="meta"><dt>系列名</dt><dd>人口動態資料　長期系列</dd><dt>掲載</dt><dd>第４表</dd><dt>単位</dt><dd>歳</dd><dt>公表年</dt><dd>統1177年</dd></dl>
 <figure class="chart" role="img" aria-label="平均寿命の推移（統600年ごろ〜統1178年）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="100%" style="display:block;max-width:640px;margin:0 auto;font-family:inherit"><rect x="133.0" y="74" width="153.9" height="278" fill="var(--accent)" opacity=".08"/><line x1="210.0" y1="22" x2="210.0" y2="74" stroke="var(--muted)" stroke-width=".8" opacity=".6"/><text x="210.0" y="18" font-size="14" fill="var(--fg)" text-anchor="start">一度目の停滞（統678〜838年）</text><line x1="335.0" y1="74" x2="335.0" y2="352" stroke="var(--accent)" stroke-dasharray="4 4" stroke-width="1.2" opacity=".7"/><line x1="335.0" y1="40" x2="335.0" y2="74" stroke="var(--muted)" stroke-width=".8" opacity=".6"/><text x="335.0" y="36" font-size="14" fill="var(--fg)" text-anchor="middle">三つの技術（統888年）</text><rect x="537.0" y="74" width="77.0" height="278" fill="var(--accent)" opacity=".08"/><line x1="575.5" y1="58" x2="575.5" y2="74" stroke="var(--muted)" stroke-width=".8" opacity=".6"/><text x="575.5" y="54" font-size="14" fill="var(--fg)" text-anchor="end">二度目の停滞（統1098年〜）</text><line x1="58" y1="352.0" x2="614" y2="352.0" stroke="var(--rule)" stroke-width="1"/><text x="50" y="357.0" font-size="14" fill="var(--muted)" text-anchor="end">0</text><line x1="58" y1="305.7" x2="614" y2="305.7" stroke="var(--rule)" stroke-width="1"/><text x="50" y="310.7" font-size="14" fill="var(--muted)" text-anchor="end">50</text><line x1="58" y1="259.3" x2="614" y2="259.3" stroke="var(--rule)" stroke-width="1"/><text x="50" y="264.3" font-size="14" fill="var(--muted)" text-anchor="end">100</text><line x1="58" y1="213.0" x2="614" y2="213.0" stroke="var(--rule)" stroke-width="1"/><text x="50" y="218.0" font-size="14" fill="var(--muted)" text-anchor="end">150</text><line x1="58" y1="166.7" x2="614" y2="166.7" stroke="var(--rule)" stroke-width="1"/><text x="50" y="171.7" font-size="14" fill="var(--muted)" text-anchor="end">200</text><line x1="58" y1="120.3" x2="614" y2="120.3" stroke="var(--rule)" stroke-width="1"/><text x="50" y="125.3" font-size="14" fill="var(--muted)" text-anchor="end">250</text><line x1="58" y1="74.0" x2="614" y2="74.0" stroke="var(--rule)" stroke-width="1"/><text x="50" y="79.0" font-size="14" fill="var(--muted)" text-anchor="end">300</text><line x1="58.0" y1="352" x2="58.0" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="58.0" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">600</text><line x1="154.2" y1="352" x2="154.2" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="154.2" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">700</text><line x1="250.4" y1="352" x2="250.4" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="250.4" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">800</text><line x1="346.6" y1="352" x2="346.6" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="346.6" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">900</text><line x1="442.8" y1="352" x2="442.8" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="442.8" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">1000</text><line x1="539.0" y1="352" x2="539.0" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="539.0" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">1100</text><line x1="58" y1="352" x2="614" y2="352" stroke="var(--fg)" stroke-width="1.2"/><line x1="58" y1="74" x2="58" y2="352" stroke="var(--fg)" stroke-width="1.2"/><text x="6" y="64" font-size="13" fill="var(--muted)">歳</text><text x="614" y="392" font-size="13" fill="var(--muted)" text-anchor="end">年（統）</text><path d="M58.0,310.3 L133.0,281.6 L286.9,274.2 L335.0,270.5 L537.0,122.2 L614.0,120.3" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="58.0" cy="310.3" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="58.0" y="328.3" font-size="14" fill="var(--fg)" text-anchor="start">約45</text><circle cx="133.0" cy="281.6" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="133.0" y="299.6" font-size="14" fill="var(--fg)" text-anchor="middle">76</text><circle cx="286.9" cy="274.2" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="286.9" y="292.2" font-size="14" fill="var(--fg)" text-anchor="middle">84</text><circle cx="335.0" cy="270.5" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="335.0" y="288.5" font-size="14" fill="var(--fg)" text-anchor="middle">88</text><circle cx="537.0" cy="122.2" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="537.0" y="110.2" font-size="14" fill="var(--fg)" text-anchor="middle">248</text><circle cx="614.0" cy="120.3" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="614.0" y="108.3" font-size="14" fill="var(--fg)" text-anchor="end">250</text></svg><figcaption>図　平均寿命（推計）の推移。統888年から統1098年ごろまでの上昇期は点を打たず線で結んでいる。統600年ごろの値は記録が乏しく、おおよその値である。</figcaption></figure>
+<div class="sheet">
+<div class="vt"><span>人口動態資料　長期系列.pdf</span><span>9 / 64 頁</span><span>⇩ PDF</span><span>⇩ 表計算形式</span></div>
+<div class="paper">
+<div class="hd"><span>人口動態資料　長期系列　Ⅱ　寿命</span><span>統　計　院</span></div><div class="tno"><b>第４表</b>平均寿命（男女計）の推移</div><div class="unit">（単位：歳）</div>
 <div class="tbl"><table>
 <thead><tr><th>年次</th><th class="r">平均寿命（推計）</th><th>備考</th></tr></thead>
 <tbody>
@@ -91,6 +121,9 @@ table{font-size:16px}
 <tr><td>統1177年</td><td class="r">約250</td><td>現行推計</td></tr>
 </tbody></table></div>
 <div class="note"><p>注１）統898年以前の値は、当時の死亡記録と人口記録から統計院が遡って推計したものである。</p><p>注２）統898年から統1098年ごろまでの上昇期については、処置の普及の度合いが地域・年代によって大きく異なり推計の幅が大きいため、本表では掲げていない。</p><p>注３）平均寿命は上限ではない。現行推計の時点で、三百歳前後に達する者も記録されている。</p><p>資料出所：統計院「人口動態資料」長期系列。</p></div>
+<div class="pg">— 9 —</div>
+</div>
+</div>
 <div class="tadashigaki">
 <p>本表の数値は推計値を含む。数値は概数であり、年次の「ごろ」は推計の幅が前後数十年に及ぶことを示す。</p>
 </div>

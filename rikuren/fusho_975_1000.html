@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>負傷の記録　筋肉・腱の損傷の件数 ― 陸上競技連盟</title>
+<style>
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--font);font-size:17px;line-height:1.85;letter-spacing:.02em}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+header.site{background:var(--head-bg);color:var(--head-fg);border-bottom:var(--head-border)}
+header.site .wrap{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:4px 16px;padding-top:18px;padding-bottom:16px}
+header.site .brand{color:var(--head-fg);font-size:22px;font-weight:600;letter-spacing:.12em;font-family:var(--brand-font)}
+header.site .tag{font-size:13px;letter-spacing:.2em;opacity:.8}
+nav.crumbs{font-size:13px;color:var(--muted);border-bottom:1px solid var(--rule)}
+nav.crumbs .wrap{padding-top:8px;padding-bottom:8px}
+nav.crumbs a{color:var(--muted)}
+main{padding:28px 0 48px}
+.kind{margin:0 0 6px;font-size:13px;letter-spacing:.3em;color:var(--muted)}
+h1{font-size:26px;line-height:1.5;margin:0 0 8px;font-weight:600;letter-spacing:.03em;font-family:var(--title-font)}
+.sub{margin:0 0 20px;color:var(--muted);font-size:15px}
+h2{font-size:18px;margin:34px 0 10px;padding-bottom:4px;border-bottom:1px solid var(--rule);font-weight:600;letter-spacing:.08em}
+h3{font-size:16px;margin:24px 0 6px;font-weight:600}
+p{margin:0 0 1em;text-align:justify}
+dl.meta{display:grid;grid-template-columns:max-content 1fr;gap:4px 18px;margin:0 0 26px;padding:14px 18px;border:1px solid var(--rule);background:var(--panel);font-size:15px}
+dl.meta dt{color:var(--muted);white-space:nowrap}
+dl.meta dd{margin:0}
+.tbl{overflow-x:auto;margin:14px 0 18px}
+table{border-collapse:collapse;width:100%;font-size:16px}
+th,td{padding:9px 12px;border-bottom:1px solid var(--rule);vertical-align:top;line-height:1.5}
+thead th{border-top:2px solid var(--fg);border-bottom:1px solid var(--fg);font-weight:400;font-size:14px;color:var(--muted);text-align:left}
+td.r,th.r{text-align:right;white-space:nowrap}
+td.c,th.c{text-align:center}
+tr.sum td{border-top:1px solid var(--fg);border-bottom:2px solid var(--fg);font-weight:600}
+td.r{font-variant-numeric:tabular-nums}
+.note{font-size:13.5px;color:var(--muted);line-height:1.7;margin:0 0 16px}
+.note p{margin:0;padding-left:3.2em;text-indent:-3.2em;text-align:left}
+.tadashigaki{font-size:13.5px;color:var(--muted);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:8px 2px;margin:8px 0 20px}
+.tadashigaki p{margin:0}
+.box{border:1px solid var(--accent);background:var(--panel);padding:14px 18px;margin:24px 0;font-size:15px}
+.box p{margin:0}
+figure{margin:22px 0}
+figure img{display:block;max-width:100%;height:auto;margin:0 auto;border:var(--fig-border);background:var(--fig-bg);padding:var(--fig-pad)}
+figcaption{font-size:13.5px;color:var(--muted);margin-top:8px;line-height:1.6}
+ol,ul{padding-left:1.6em;margin:0 0 1em}
+ol li,ul li{margin:2px 0}
+hr{border:0;border-top:1px solid var(--rule);margin:28px 0}
+ul.list{list-style:none;padding:0;margin:0}
+ul.list li{border-bottom:1px solid var(--rule);padding:14px 0}
+ul.list .k{font-size:12px;letter-spacing:.25em;color:var(--muted);margin-right:10px}
+ul.list .t{font-size:17px}
+ul.list .y{font-size:13px;color:var(--muted);margin-left:10px;white-space:nowrap}
+figure.chart{margin:18px 0 22px;padding:12px 8px 6px;border:1px solid var(--rule);background:var(--panel)}
+figure.chart svg text{font-family:inherit}
+.buy{margin:26px 0 10px}
+.buy a{display:inline-block;background:var(--accent);color:#fff;padding:12px 34px;font-size:16px;letter-spacing:.2em;border-radius:3px}
+.buy a:hover{text-decoration:none;opacity:.9}
+.buy p{margin:0}
+.cart{border:1px solid var(--rule);background:var(--panel);padding:18px 20px;margin:18px 0}
+.cart p{margin:0 0 .6em}
+.cart p:last-child{margin:0}
+footer.site{border-top:1px solid var(--rule);font-size:12.5px;color:var(--muted)}
+footer.site .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:16px;padding-bottom:28px}
+footer.site a.mark{color:var(--muted);opacity:.55;font-size:12px;padding:6px 8px}
+footer.site a.mark:hover{opacity:1;text-decoration:none}
+/* 紙の資料（第1回の直した後の画面に合わせた。11月20日） */
+.sheet{background:#55595e;padding:14px 18px 22px;margin:6px 0 28px;border-radius:2px}
+.sheet .vt{display:flex;flex-wrap:wrap;gap:4px 18px;color:#e3e5e8;font-family:"Hiragino Sans",sans-serif;font-size:12.5px;margin:0 0 12px;letter-spacing:.02em}
+.sheet .vt span:nth-child(2){margin-left:auto}
+.paper{background:#f3f2ee;color:#1c1e21;font-family:"Hiragino Mincho ProN","Yu Mincho",serif;padding:34px 42px 22px;box-shadow:0 6px 24px rgba(0,0,0,.35);font-size:16px;line-height:1.75;letter-spacing:.02em}
+.paper .hd{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #1c1e21;padding-bottom:6px;margin-bottom:16px;font-size:13.5px;letter-spacing:.06em}
+.paper .sec{font-size:16px;margin:0 0 4px}
+.paper .tno{font-size:21px;font-weight:600;line-height:1.5;margin:0 0 6px}
+.paper .tno b{margin-right:.8em}
+.paper .unit{text-align:right;font-size:13.5px;margin:0 0 4px}
+.paper table{font-size:15.5px;font-variant-numeric:tabular-nums}
+.paper thead th{color:#1c1e21;border-top:2px solid #1c1e21;border-bottom:1px solid #1c1e21;font-size:14px}
+.paper th,.paper td{border-bottom-color:#b9b6ad}
+.paper tr.sum td{border-top-color:#1c1e21;border-bottom-color:#1c1e21}
+.paper .note{color:#2a2c2f;font-size:13.5px;margin-top:10px}
+.paper .pg{text-align:center;font-size:13px;margin-top:16px;letter-spacing:.2em}
+.paper p{text-indent:1em}
+.paper .stampbox{display:inline-block;border:2.5px solid #c8432b;color:#c8432b;padding:2px 10px;font-weight:700;letter-spacing:.2em;transform:rotate(-3deg);font-size:14px}
+.paper .formhd{text-align:center;font-size:22px;letter-spacing:.3em;margin:6px 0 12px}
+.paper .formkv{display:grid;grid-template-columns:max-content 1fr max-content 1fr;gap:4px 14px;font-size:14.5px;border-bottom:1px solid #b9b6ad;padding-bottom:8px;margin-bottom:8px}
+.paper .judge{display:flex;align-items:center;gap:18px;margin-top:12px;font-size:14px}
+.paper .judge b{border:1.5px solid #1c1e21;padding:4px 18px;letter-spacing:.4em;font-size:18px}
+.paper .toc td.p{text-align:right;white-space:nowrap}
+.paper .kw{font-size:14px;margin-top:12px}
+.paper .ft{display:flex;justify-content:space-between;border-top:1px solid #b9b6ad;margin-top:14px;padding-top:6px;font-size:13px}
+@media (max-width:560px){.paper{padding:22px 18px 16px}.paper .formkv{grid-template-columns:max-content 1fr}.sheet{padding:10px 8px 14px}}
+@media (max-width:560px){body{font-size:16px}h1{font-size:22px}dl.meta{grid-template-columns:1fr;gap:0}dl.meta dt{margin-top:6px}dl.meta dd{margin-bottom:2px}th,td{padding:8px 8px;font-size:15px}}
+
+:root{--bg:#fff;--fg:#1c1f24;--muted:#5d636b;--rule:#d3d7dd;--panel:#f3f5f8;--accent:#0f2236;--link:#1d4f86;
+--head-bg:#0f2236;--head-fg:#fff;--head-border:0;--font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--brand-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--title-font:"Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;--fig-border:0;--fig-bg:transparent;--fig-pad:0}
+.wrap{max-width:960px}
+header.site .brand{letter-spacing:.2em}
+h1{font-size:24px}
+h2{border-bottom:2px solid var(--accent)}
+.jobun{font-family:"Hiragino Mincho ProN","Yu Mincho","Hiragino Mincho Pro","MS PMincho",serif;font-size:17px}
+.jobun h3{margin-top:22px}
+.jobun ol{list-style:none;padding-left:0}
+.jobun ol li{padding-left:2.2em;text-indent:-2.2em}
+td.strike{text-decoration:line-through;text-decoration-color:#2b4c8c;text-decoration-thickness:2px}
+.hand{font-family:"Hiragino Maru Gothic ProN","Hiragino Sans","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;color:#2b4c8c;font-size:17px;line-height:1.6;border:1px dashed #2b4c8c55;padding:10px 14px;margin:10px 0 18px;display:inline-block;transform:rotate(-1deg)}
+.stamp{display:inline-block;border:3px solid #c8432b;color:#c8432b;padding:4px 18px;font-weight:700;letter-spacing:.4em;transform:rotate(-4deg);margin-left:18px}
+</style></head>
+<body class="site-rikuren">
+<header class="site"><div class="wrap"><a class="brand" href="index.html">陸上競技連盟</a><span class="tag">規則・記録・調査</span></div></header>
+<nav class="crumbs"><div class="wrap"><a href="index.html">陸上競技連盟</a>　›　集計</div></nav>
+<main><div class="wrap">
+<p class="kind">集計</p>
+<h1>負傷の記録　筋肉・腱の損傷の件数</h1>
+<p class="sub">公式大会　統975〜1000年</p>
+<dl class="meta"><dt>対象</dt><dd>連盟に届け出のあった公式大会での負傷</dd></dl>
+<p>公式大会での負傷のうち、筋肉・腱の損傷の件数を年ごとにまとめた。</p>
+<figure class="chart" role="img" aria-label="筋肉や腱の怪我の件数（年ごと）"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="100%" style="display:block;max-width:640px;margin:0 auto;font-family:inherit"><line x1="58" y1="352.0" x2="614" y2="352.0" stroke="var(--rule)" stroke-width="1"/><text x="50" y="357.0" font-size="14" fill="var(--muted)" text-anchor="end">0</text><line x1="58" y1="259.3" x2="614" y2="259.3" stroke="var(--rule)" stroke-width="1"/><text x="50" y="264.3" font-size="14" fill="var(--muted)" text-anchor="end">200</text><line x1="58" y1="166.7" x2="614" y2="166.7" stroke="var(--rule)" stroke-width="1"/><text x="50" y="171.7" font-size="14" fill="var(--muted)" text-anchor="end">400</text><line x1="58" y1="74.0" x2="614" y2="74.0" stroke="var(--rule)" stroke-width="1"/><text x="50" y="79.0" font-size="14" fill="var(--muted)" text-anchor="end">600</text><line x1="58.0" y1="352" x2="58.0" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="58.0" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">975</text><line x1="169.2" y1="352" x2="169.2" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="169.2" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">980</text><line x1="280.4" y1="352" x2="280.4" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="280.4" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">985</text><line x1="391.6" y1="352" x2="391.6" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="391.6" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">990</text><line x1="502.8" y1="352" x2="502.8" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="502.8" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">995</text><line x1="614.0" y1="352" x2="614.0" y2="357" stroke="var(--muted)" stroke-width="1"/><text x="614.0" y="374" font-size="14" fill="var(--muted)" text-anchor="middle">1000</text><line x1="58" y1="352" x2="614" y2="352" stroke="var(--fg)" stroke-width="1.2"/><line x1="58" y1="74" x2="58" y2="352" stroke="var(--fg)" stroke-width="1.2"/><text x="6" y="64" font-size="13" fill="var(--muted)">件</text><text x="614" y="392" font-size="13" fill="var(--muted)" text-anchor="end">年（統）</text><path d="M58.0,297.3 L80.2,294.5 L102.5,291.3 L124.7,292.2 L147.0,286.2 L169.2,278.8 L191.4,276.5 L213.7,268.1 L235.9,261.2 L258.2,252.8 L280.4,241.3 L302.6,235.7 L324.9,223.7 L347.1,212.1 L369.4,204.7 L391.6,187.1 L413.8,180.1 L436.1,167.6 L458.3,152.3 L480.6,142.6 L502.8,129.1 L525.0,124.0 L547.3,115.7 L569.5,118.9 L591.8,104.6 L614.0,94.4" fill="none" stroke="var(--accent)" stroke-width="2.6" stroke-linejoin="round"/><circle cx="58.0" cy="297.3" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="58.0" y="315.3" font-size="14" fill="var(--fg)" text-anchor="start">118件</text><circle cx="80.2" cy="294.5" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="102.5" cy="291.3" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="124.7" cy="292.2" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="147.0" cy="286.2" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="169.2" cy="278.8" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="191.4" cy="276.5" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="213.7" cy="268.1" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="235.9" cy="261.2" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="258.2" cy="252.8" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="280.4" cy="241.3" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="302.6" cy="235.7" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="324.9" cy="223.7" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="347.1" cy="212.1" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="369.4" cy="204.7" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="391.6" cy="187.1" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="413.8" cy="180.1" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="436.1" cy="167.6" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="458.3" cy="152.3" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="480.6" cy="142.6" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="502.8" cy="129.1" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="502.8" y="117.1" font-size="14" fill="var(--fg)" text-anchor="middle">481件</text><circle cx="525.0" cy="124.0" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="547.3" cy="115.7" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="569.5" cy="118.9" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="591.8" cy="104.6" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><circle cx="614.0" cy="94.4" r="4.5" fill="var(--bg)" stroke="var(--accent)" stroke-width="2.4"/><text x="614.0" y="82.4" font-size="14" fill="var(--fg)" text-anchor="end">556件</text></svg><figcaption>図　筋肉や腱の怪我の件数（陸上競技、統975〜1000年）。統995年は統975年の約4倍</figcaption></figure>
+<div class="tbl"><table>
+<thead><tr><th>年</th><th class="r">件数</th></tr></thead>
+<tbody>
+<tr><td>統975年</td><td class="r">118</td></tr>
+<tr><td>統980年</td><td class="r">158</td></tr>
+<tr><td>統985年</td><td class="r">239</td></tr>
+<tr><td>統990年</td><td class="r">356</td></tr>
+<tr><td>統995年</td><td class="r">481</td></tr>
+<tr><td>統1000年</td><td class="r">556</td></tr>
+</tbody></table></div>
+<div class="note"><p>資料出所：陸上競技連盟「負傷の記録」</p></div>
+</div></main>
+<footer class="site"><div class="wrap"><span>陸上競技連盟</span><a class="mark" href="../_/index.html" title="※">※</a></div></footer>
+</body></html>
